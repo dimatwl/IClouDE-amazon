@@ -4,10 +4,6 @@ import com.google.gson.Gson;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 /**
  * Created with IntelliJ IDEA.
@@ -41,13 +37,13 @@ public class GetBuildLogsHandler {
  */
 
 class BuildLogsResponse {
-  private Boolean requestResult;
-  private String resultDescription;
+  private Boolean result;
+  private String description;
   private String buildLogs;
 
-  public BuildLogsResponse(Boolean requestResult, String resultDescription, String buildLogs) {
-    this.requestResult = requestResult;
-    this.resultDescription = resultDescription;
+  public BuildLogsResponse(Boolean result, String description, String buildLogs) {
+    this.result = result;
+    this.description = description;
     this.buildLogs = buildLogs;
   }
 }

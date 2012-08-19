@@ -4,9 +4,7 @@ import Managers.ZipManager;
 import com.google.gson.Gson;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -146,13 +144,13 @@ public class ZipUploadHandler {
  */
 
 class ZipUploadResponse {
-  private Boolean requestResult;
-  private String resultDescription;
+  private Boolean result;
+  private String description;
   private String zipID;
 
-  public ZipUploadResponse(Boolean requestResult, String resultDescription, String buildLogs) {
-    this.requestResult = requestResult;
-    this.resultDescription = resultDescription;
+  public ZipUploadResponse(Boolean result, String description, String buildLogs) {
+    this.result = result;
+    this.description = description;
     this.zipID = zipID;
   }
 }

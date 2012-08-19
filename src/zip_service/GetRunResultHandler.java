@@ -4,10 +4,6 @@ import com.google.gson.Gson;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,13 +35,13 @@ public class GetRunResultHandler {
  */
 
 class RunResultResponse {
-  private Boolean requestResult;
-  private String resultDescription;
+  private Boolean result;
+  private String description;
   private String runResult;
 
-  public RunResultResponse(Boolean requestResult, String resultDescription, String runResult) {
-    this.requestResult = requestResult;
-    this.resultDescription = resultDescription;
+  public RunResultResponse(Boolean result, String description, String runResult) {
+    this.result = result;
+    this.description = description;
     this.runResult = runResult;
   }
 }
