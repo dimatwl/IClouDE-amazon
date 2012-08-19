@@ -1,11 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="IClouDE-amazon:war exploded">
+  <artifact type="war" build-on-make="true" name="IClouDE-amazon:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/IClouDE_amazon_war_exploded</output-path>
-    <root id="root">
+    <root id="archive" name="IClouDE-amazon_war exploded.war">
       <element id="javaee-facet-resources" facet="IClouDE-amazon/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="IClouDE-amazon" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jersey-multipart-1.6" />
+          <element id="library" level="project" name="gson-2.2.2" />
+          <element id="library" level="project" name="jackson-core-asl-1.9.2" />
+          <element id="library" level="project" name="asm-3.1" />
         </element>
       </element>
     </root>

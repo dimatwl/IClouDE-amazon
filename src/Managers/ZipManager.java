@@ -1,4 +1,4 @@
-package zip_service;
+package Managers;
 
 import java.io.*;
 import java.util.Enumeration;
@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
  * Time: 9:22
  * Zip & unzip file by path name
  */
-public class ZipHandler {
+public class ZipManager {
 
   private static final void copyInputStream(InputStream in, OutputStream out)
           throws IOException {

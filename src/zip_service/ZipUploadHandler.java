@@ -1,12 +1,15 @@
 package zip_service;
 
+import Managers.ZipManager;
 import com.google.gson.Gson;
+import com.sun.jersey.core.header.FormDataContentDisposition;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,18 +25,42 @@ public class ZipUploadHandler {
   protected final Gson GSON = new Gson();
 
   @POST
+  @Consumes("multipart/form-data")
   @Produces("text/plain")
-  //@Consumes(MediaType.TEXT_PLAIN)
-  //@Consumes(MediaType.MULTIPART_FORM_DATA)
-  //@Produces(MediaType.TEXT_PLAIN)
-  public String uploadFile(@Context HttpServletRequest request) {
+  public String uploadFile(@FormParam("file") File file,
+                           @FormParam("file") FormDataContentDisposition fcdsFile) {
 
+    Boolean result;
+    String description;
+    String zipID;
 
-    Boolean requestResult = true;
-    String resultDescription = "";
-    String zipID = "";
+    try {
+      zipID = IDGenerator.getNextID();
+      (new File("D:\\DataBase\\" + zipID)).mkdir();
 
-    return GSON.toJson(new BuildLogsResponse(requestResult, resultDescription, zipID));
+      FileWriter out = new FileWriter("D:\\DataBase\\" + zipID + "\\task status");
+      out.write("task not set");
+      out.close();
+
+      String fileLocation = "D:\\DataBase\\" + zipID + "\\" + fcdsFile.getFileName();
+      File uploadedZipFile = new File(fileLocation);
+
+      ZipManager.unzipFile(fileLocation);
+
+      result = true;
+      description = "Zip file successfully uploaded.";
+
+    } catch (IllegalIDFileFormatException e) {
+      result = false;
+      description = "ID generation failed.";
+      zipID = "";
+    } catch (IOException e) {
+      result = false;
+      description = "File saving failed.";
+      zipID = "";
+    }
+
+    return GSON.toJson(new BuildLogsResponse(result, description, zipID));
   }
 
   /*@FormDataParam("zipFile") String fileName
