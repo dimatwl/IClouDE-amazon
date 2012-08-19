@@ -164,7 +164,7 @@
       <file leaf-file-name="ZipUploadHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zip_service/ZipUploadHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="51" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0">
+            <state line="38" column="80" selection-start="942" selection-end="984" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,17 +173,28 @@
       <file leaf-file-name="GetRunResultHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zip_service/GetRunResultHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="96" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="313" selection-end="335" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetBuildLogsHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GetBuildLogsHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zip_service/GetBuildLogsHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="51" selection-start="938" selection-end="938" vertical-scroll-proportion="0.5720824">
+            <state line="41" column="54" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckTaskStatusHandler.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/zip_service/CheckTaskStatusHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="88" selection-start="552" selection-end="552" vertical-scroll-proportion="0.49427918">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +202,7 @@
       <file leaf-file-name="IDGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zip_service/IDGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="21" selection-start="988" selection-end="1078" vertical-scroll-proportion="0.0">
+            <state line="40" column="19" selection-start="988" selection-end="1078" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -207,8 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/GetRunResultHandler.java" />
-        <option value="$PROJECT_DIR$/src/buildZipGetter.java" />
         <option value="$PROJECT_DIR$/src/GetBuildZipHandler.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/zip_service/GetBuildZipHandler.java" />
@@ -222,7 +231,9 @@
         <option value="$PROJECT_DIR$/src/zip_service/SetBuildRunInfoHandler.java" />
         <option value="$PROJECT_DIR$/src/zip_service/ZipUploadHandler.java" />
         <option value="$PROJECT_DIR$/src/zip_service/GetRunResultHandler.java" />
+        <option value="$PROJECT_DIR$/src/zip_service/ChecktaskStatusHandler.java" />
         <option value="$PROJECT_DIR$/src/zip_service/GetBuildLogsHandler.java" />
+        <option value="$PROJECT_DIR$/src/zip_service/CheckTaskStatusHandler.java" />
       </list>
     </option>
   </component>
@@ -431,6 +442,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GetBuildLogsHandler.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IClouDE-amazon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IClouDE-amazon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zip_service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckTaskStatusHandler.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -819,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zip_service/IDGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="21" selection-start="988" selection-end="1078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/zip_service/SetBuildRunInfoHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="34" selection-start="2480" selection-end="2480" vertical-scroll-proportion="0.0">
@@ -833,24 +859,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zip_service/ZipUploadHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/zip_service/GetRunResultHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="51" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0">
+        <state line="16" column="0" selection-start="313" selection-end="335" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zip_service/GetRunResultHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/zip_service/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="96" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+        <state line="40" column="19" selection-start="988" selection-end="1078" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/zip_service/GetBuildLogsHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="51" selection-start="938" selection-end="938" vertical-scroll-proportion="0.5720824">
+        <state line="41" column="54" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zip_service/ZipUploadHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="80" selection-start="942" selection-end="984" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zip_service/CheckTaskStatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="88" selection-start="552" selection-end="552" vertical-scroll-proportion="0.49427918">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

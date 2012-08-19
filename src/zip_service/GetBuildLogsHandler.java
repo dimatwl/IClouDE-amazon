@@ -23,11 +23,11 @@ public class GetBuildLogsHandler {
   @Produces(MediaType.APPLICATION_OCTET_STREAM)
   public String getBuildLogs(@QueryParam("zipID") String zipID) {
 
-    Boolean requestResult = true;
-    String resultDescription = "";
+    Boolean result = true;
+    String description = "";
     String buildLogs = "";
 
-    return GSON.toJson(new BuildLogsResponse(requestResult, resultDescription, buildLogs));
+    return GSON.toJson(new BuildLogsResponse(result, description, buildLogs));
   }
 }
 
