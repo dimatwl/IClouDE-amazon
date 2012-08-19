@@ -34,11 +34,11 @@ public class CheckTaskStatusHandler {
       taskStatus = in.readLine();
       in.close();
 
-      if(taskStatus != null && taskStatus.equals("task set")) {
-        result = false;
+      if(taskStatus != null && taskStatus.equals("task ready")) {
+        result = true;
         description = "Task is ready.";
       } else {
-        result = true;
+        result = false;
         description = "Task is not ready.";
       }
 
