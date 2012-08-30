@@ -1,4 +1,4 @@
-package Managers;
+package managers;
 
 import java.io.*;
 import java.util.Enumeration;
@@ -26,6 +26,10 @@ public class ZipManager {
     out.close();
   }
 
+  /**
+   * Unzips file by name
+   * @param zipFileName - zip file name
+   */
   public static void unzipFile(String zipFileName) {
     Enumeration entries;
     ZipFile zipFile;
@@ -39,9 +43,7 @@ public class ZipManager {
       while (entries.hasMoreElements()) {
         ZipEntry entry = (ZipEntry) entries.nextElement();
         if (entry.isDirectory()) {
-          // Assume directories are stored parents first then children.
           System.err.println("Extracting directory: " + entry.getName());
-          // This is not robust, just for demonstration purposes.
           (new File(dirName + "\\" + entry.getName())).mkdir();
           continue;
         }
@@ -56,21 +58,25 @@ public class ZipManager {
     }
   }
 
-  public static void zipFile(String folderName) {
+  /**
+   * Zips file by name
+   * @param fileName - file name, needed for zipping
+   */
+  public static void zipFile(String fileName) {
 
     // Create a buffer for reading the files
     byte[] buf = new byte[1024];
 
     try {
       // Create the ZIP file
-      String outZipFileName = folderName;
+      String outZipFileName = fileName;
       ZipOutputStream out = new ZipOutputStream(new FileOutputStream(outZipFileName));
 
       // Compress the files
-      FileInputStream in = new FileInputStream(folderName);
+      FileInputStream in = new FileInputStream(fileName);
 
       // Add ZIP entry to output stream.
-      out.putNextEntry(new ZipEntry(folderName));
+      out.putNextEntry(new ZipEntry(fileName));
 
       // Transfer bytes from the file to the ZIP file
       int len;
