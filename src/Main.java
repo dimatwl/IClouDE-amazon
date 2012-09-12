@@ -10,14 +10,14 @@ import java.io.IOException;
  */
 public class Main {
   public static void main(String[] args) {
-    try {
-      BuildRunManager.build(BuildRunManager.BUILD);
+    /*try {
+      BuildRunManager.execTask(BuildRunManager.BUILD);
       System.out.println("Ok!");
     } catch (IOException e) {
       System.err.println("IOException! " + e.toString());
     } catch (InterruptedException e){
       System.err.println("InterruptedException!");
-    }
+    }*/
 
 //    try {
 //      String id1 = IDGenerator.getNextID();

@@ -13,7 +13,7 @@
   <body>
       <h1>File Upload with Jersey</h1>
 
-      <form action="http://localhost:8080/rest/uploadZip" method="post" enctype="multipart/form-data">
+      <form action="http://localhost:8080/rest/setBuildRunInfo" method="post" enctype="application/json">
 
           <p>
               Select a file : <input type="file" name="zipFile" size="45" />
